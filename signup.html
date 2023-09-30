@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="registration-form-container shadow p-4 rounded">
+            <h3 class="text-center">Registration Form</h3>
+            <form method="post" id="registration-form">
+                <div class="form-group">
+                    <label for="userName">Username: <span class="text-danger">*</span></label>
+                    <input type="text" id="userName" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="userEmail">Email: <span class="text-danger">*</span></label>
+                    <input type="email" id="userEmail" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="userPass">Password: <span class="text-danger">*</span></label>
+                    <input type="password" id="userPass" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="userCpass">Confirm Password: <span class="text-danger">*</span></label>
+                    <input type="password" id="userCpass" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-outline-dark btn-block" id="registration-submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="hotel.js"></script>
+    <script>
+        var form = document.getElementById('registration-form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            var username = document.getElementById('userName').value;
+            var email = document.getElementById('userEmail').value;
+            var pass = document.getElementById('userPass').value;
+            var cpass = document.getElementById('userCpass').value;
+            if(!username){
+                alert("Enter your username");
+                return;
+            }
+            if(!email){
+                alert("Enter your email");
+                return;
+            }else if(email){
+                if(!isEmail(email)){
+                    alert("Enter valid email");
+                    return;
+                }
+            }
+            if(!pass){
+                alert("Enter your password");
+                return;
+            }else if(pass){
+                if(pass.length < 8){
+                    alert("Password should be greater than 8 characters");
+                    return;
+                }
+            }
+            if(!cpass || cpass !== pass){
+                alert("Password and Confirm Password should be same");
+                return;
+            }
+            alert("Registration Successfull");
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

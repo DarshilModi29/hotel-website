@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Title</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="hotel.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+      aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="index.html">MODI'S GRAND GATEWAY</a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="menu.html">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contactus.html">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="feedback.html">Feedback</a>
+        </li>
+      </ul>
+      <div class="icons">
+        <a href="#"><i class="bi bi-facebook text-primary mr-1"></i></a>
+        <a href="#"><i class="bi bi-instagram mr-1" style="color: rgb(255, 125, 147);"></i></a>
+        <a href="#"><i class="bi bi-twitter mr-1 text-primary"></i></a>
+      </div>
+      <div id="buttons" class="ml-3">
+        <a href="signup.html" class="btn btn-outline-primary ml-2">Sign up</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container mt-4 mb-3">
+    <div class="feedback-form-container shadow rounded p-4">
+      <h3 class="text-center">FEEDBACK FORM</h3>
+      <form action="" method="post" id="feedback-form">
+        <div class="form-group mt-3">
+          <label for="f-name">Name: <span class="text-danger">*</span></label>
+          <input type="text" class="form-control" id="f-name" name="f-name">
+        </div>
+        <div class="form-group mt-3">
+          <label for="f-email">Email: <span class="text-danger">*</span></label>
+          <input type="text" class="form-control" id="f-email" name="f-email">
+        </div>
+        <div class="userOptions">
+          <p class="mb-2">DineIn/TakeOut: <span class="text-danger">*</span></p>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="user-option" id="userOption1" value="Dine in">
+            <label class="form-check-label" for="userOption1">Dine In</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="user-option" id="userOption2" value="Take out">
+            <label class="form-check-label" for="userOption2">Take Out</label>
+          </div>
+        </div>
+        <div class="improvemets mt-3">
+          <p class="mb-2">What should we Improve:</p>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="Food Quality" id="Checkbox1" value="option1">
+            <label class="form-check-label" for="Checkbox1">Food Quality</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="Services" id="Checkbox2" value="option2">
+            <label class="form-check-label" for="Checkbox2">Services</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="Menu" id="Checkbox3" value="option3">
+            <label class="form-check-label" for="Checkbox3">Menu</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="Food Taste" id="Checkbox4" value="option3">
+            <label class="form-check-label" for="Checkbox4">Food Taste</label>
+          </div>
+        </div>
+        <div class="form-group mt-3">
+          <label for="suggestion">Any Comments or Suggestions?</label>
+          <textarea name="suggestion" id="suggestion" rows="3" class="form-control"></textarea>
+        </div>
+        <button type="submit" class="btn btn-outline-dark btn-block">Submit</button>
+      </form>
+    </div>
+    </div>
+  </div>
+  <div class="footer bg-dark text-white p-3 w-100">
+    <p class="text-center">&copy; 2021 | All Rights Reserved.</p>
+  </div>
+  <script src="hotel.js"></script>
+  <script>
+    const form = document.getElementById('feedback-form');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault(); 
+      var name = document.getElementById('f-name').value;
+      var email = document.getElementById('f-email').value;
+      var userOption = document.querySelector('input[name=user-option]:checked'); 
+      if (!name) {
+        alert("Enter Your Name");
+        return;
+      }
+      if(!email){
+        alert("Enter your Email");
+        return;
+      }
+      else if(email){
+        if(!isEmail(email)){
+          alert("Enter a valid email");
+          return;
+        }
+      }
+      if(!userOption){
+        alert("Select an option in DineIn/TakeOut");
+        return;
+      }
+      alert("Thank you for your feedback");
+      form.reset();
+    });
+  </script>
+</body>
+</html>

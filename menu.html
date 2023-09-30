@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Title</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="hotel.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+      aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="index.html">MODI'S GRAND GATEWAY</a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="menu.html">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contactus.html">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="feedback.html">Feedback</a>
+        </li>
+      </ul>
+      <div class="icons">
+        <a href="#"><i class="bi bi-facebook text-primary mr-1"></i></a>
+        <a href="#"><i class="bi bi-instagram mr-1" style="color: rgb(255, 125, 147);"></i></a>
+        <a href="#"><i class="bi bi-twitter mr-1 text-primary"></i></a>
+      </div>
+      <div id="buttons" class="ml-3">
+        <a href="signup.html" class="btn btn-outline-primary ml-2">Sign up</a>
+      </div>
+    </div>
+  </nav>
+  <div class="header-menu">
+    <img src="images/menu.jpg" alt="">
+    <div class="img-text text-white">
+        <h1>MENU</h1>
+    </div>
+  </div>
+  <div class="container search-bar d-flex justify-content-center mt-3 mb-3">
+    <input type="text" placeholder="Search Item" id="searchBar" class="w-50 form-control">
+  </div>
+  <div class="container-fluid bg-light">
+    <div class="row">
+      <div class="col-md-6 mt-4 p-4">
+        <h2 class="new-font text-center text-danger mt-2">Soups</h2>
+        <div class="item">
+          <p class="mt-3">Manchow Soup</p>
+          <p class="mt-3 price">₹125</p>
+        </div>
+        <div class="item">
+          <p class="mt-3">Tomato Soup</p>
+          <p class="mt-3 price">₹105</p>
+        </div>
+        <div class="item">
+          <p class="mt-3">Hot & Sour Soup</p>
+          <p class="mt-3 price">₹115</p>
+        </div>
+        <div class="item">
+          <p class="mt-3">Baby Corn Soup</p>
+          <p class="mt-3 price">₹125</p>
+        </div>
+        <h2 class="new-font text-center text-danger">Starters</h2>
+        <div class="item">
+          <p class="mt-3">Manchurian Dry</p>
+          <p class="mt-3 price">₹255</p>
+        </div>
+        <div class="item">
+          <p class="mt-3">Paneer Chilly</p>
+          <p class="mt-3 price">₹275</p>
+        </div>
+        <div class="item">
+          <p class="mt-3">Veg 65</p>
+          <p class="mt-3 price">₹255</p>
+        </div>
+        <div class="item">
+          <p class="mt-3">Corn Cheese Ball</p>
+          <p class="mt-3 price">₹295</p>
+        </div>
+      </div>
+      <div class="col-md-6 mt-4 p-4">
+        <h2 class="new-font text-center text-danger mt-2">Main Course</h2>
+        <div class="item">
+          <p class="mt-3">Paneer Butter Masala</p>
+          <p class="mt-3 price">₹295</p>
+        </div>
+        <div class="item">
+          <p class="mt-3">Paneer Bhurji</p>
+          <p class="mt-3 price">₹305</p>
+        </div>
+        <div class="item">
+          <p class="mt-3">Cheese Butter Masala</p>
+          <p class="mt-3 price">₹305</p>
+        </div>
+        <div class="item">
+          <p class="mt-3">Cheese Angoori</p>
+          <p class="mt-3 price">₹325</p>
+        </div>
+        <div class="item">
+          <p class="mt-3">Butter Roti</p>
+          <p class="mt-3 price">₹40</p>
+        </div>
+        <div class="item">
+          <p class="mt-3">MGG Special Thali</p>
+          <p class="mt-3 price">₹535</p>
+        </div>
+        <div class="item">
+          <p class="mt-3">Gulaab Jamun</p>
+          <p class="mt-3 price">₹195</p>
+        </div>
+        <div class="item">
+          <p class="mt-3">Dal Fry-Jira Rice</p>
+          <p class="mt-3 price">₹405</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer bg-dark text-white p-3 w-100">
+    <p class="text-center">&copy; 2021 | All Rights Reserved.</p>
+  </div>
+  <script src="hotel.js"></script>
+  <script>
+    const searchBar = document.getElementById('searchBar');
+    searchBar.addEventListener('input', function () {
+      const searchQuery = searchBar.value.toLowerCase();
+      const items = document.getElementsByClassName('item');
+      for (const item of items) {
+        const menuItem = item.querySelector('p:first-child').textContent.toLowerCase();
+        const display = menuItem.includes(searchQuery) ? 'visible' : 'hidden';
+        item.style.visibility = display;
+      }
+    });
+  </script>
+</body>
+</html>

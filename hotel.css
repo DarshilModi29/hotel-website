@@ -1,0 +1,75 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Poppins:wght@300&display=swap');
+.nav-link{
+    font-size: 1.2rem;
+    margin-left: 10px;
+}
+.navbar-nav{
+    margin-left: 30px !important;
+}
+#buttons > button{
+    width: 100px;
+}
+@media screen and (max-width: 415px) {
+    #logo{
+        height: 75px;
+        width: 120px;
+    }
+}
+.header-home, .header-menu, .header-about{
+    position: relative;
+}
+.header-home > img , .header-menu > img, .header-about>img{
+    height : 450px ;
+    width: 100%;
+}
+.img-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    font-family: 'Croissant One';
+}
+.new-font{
+    font-family: 'Croissant One';
+}
+.some-text{
+    flex-direction: column;
+    height: 100%;
+}
+.text-img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.text-img > a{
+    opacity: 0.9;   
+}
+.text-img > a:hover{
+    background-color: rgb(255, 96, 96);
+    opacity: 0.9;
+}
+.reservation-container{
+    background-color: whitesmoke;
+}
+ul{
+    list-style: none;
+}
+.item>p{
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+}
+.item{
+    display: flex;
+    justify-content: space-between;
+}
+.price{
+    float: right;
+}
